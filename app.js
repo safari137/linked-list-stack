@@ -42,6 +42,9 @@ function Stack() {
     }
     
     this.pop = function() {
+        if (this.tail == null)
+            return null;
+        
         var popped = this.tail;
         this.tail = this.tail.previous;
         this.tail.next = null;
@@ -59,6 +62,6 @@ function Stack() {
     }
     
     this.isEmptyStack = function() {
-        return this.length > 0;
+        return this.length < 1;
     }
 }

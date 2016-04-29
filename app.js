@@ -42,11 +42,11 @@ function Stack() {
     }
     
     this.pop = function() {
-        var temp = this.tail;
+        var popped = this.tail;
         this.tail = this.tail.previous;
         this.tail.next = null;
         this.length--;
         
-        return temp;
+        return popped;
     }
 }

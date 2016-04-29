@@ -49,4 +49,16 @@ function Stack() {
         
         return popped;
     }
+    
+    this.top = function() {
+        return this.tail;
+    }
+    
+    this.size = function() {
+        return this.length;
+    }
+    
+    this.isEmptyStack = function() {
+        return this.length > 0;
+    }
 }
